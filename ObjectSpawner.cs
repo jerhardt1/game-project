@@ -19,8 +19,6 @@ public class ObjectSpawner : MonoBehaviour
     }
     public void InitialSpawn(GameObject aObjectToSpawn)
     {
-        Debug.Log("Hello");
-
         GameObject spawnObject = Instantiate(aObjectToSpawn, transform.position, transform.rotation);
         LevelGenerator.instance.addObjectToList(spawnObject.tag, spawnObject);
         LevelGenerator.instance.moveCamera(spawnObject, spawnObject.transform.Find("FocusPoint").gameObject);
@@ -146,13 +144,6 @@ public class ObjectSpawner : MonoBehaviour
         return rotation;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DebugCamera();
-        }
-    }
 
 
 

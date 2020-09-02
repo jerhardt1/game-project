@@ -32,6 +32,7 @@ public class StateMachine : MonoBehaviour
         }
     }
 
+
     private void SwitchToNewState(Type nextState)
     {
         CurrentState = _availableStates[nextState];

@@ -95,6 +95,7 @@ public class UIIngame : MonoBehaviour
     public void BackToHub()
     {
         ResumeGame();
+        UserManager.Instance.ModifyGold(LevelGenerator.instance.ReceivedGold);
         GameSceneManager.Instance.NextScene("Hub");
     }
 
